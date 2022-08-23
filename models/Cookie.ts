@@ -7,7 +7,7 @@ export class Cookie {
   chocolateChipNum: number;
   constructor(name: string, colour: string, chocolateChipNum: number) {
     this.name = name;
-    this.colour = colour;
-    this.chocolateChipNum = chocolateChipNum;
+    this.colour = 'brown';
+    this.chocolateChipNum = 0;
   }
 }
