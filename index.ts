@@ -83,11 +83,11 @@ document
   .addEventListener('click', addChocolateChip);
 function addChocolateChip() {
   //same as changecolour
-  let select: HTMLSelectElement = <HTMLSelectElement>(
-    document.getElementById('cookieSelector')
-  );
+  let selector: HTMLSelectElement =
+    document.querySelector<HTMLSelectElement>('#cookieSelector');
+  let selected = selector.options[selector.selectedIndex].innerHTML;
   for (let i = 0; i < Cookies.length; i++) {
-    if (select === Cookies[i].name) {
+    if (selected === Cookies[i].name) {
       Cookies[i].chocolateChipNum++;
     }
   }
