@@ -78,8 +78,20 @@ function changeColour() {
 
 //TODO: this fuction needs to be triggered by button addChocolateChip-btn
 // upon pressing the button it should add a chocolate chip to cookies selected from the dropdown
+document
+  .getElementById('addChocolateChip-btn')
+  .addEventListener('click', addChocolateChip);
 function addChocolateChip() {
   //same as changecolour
+  let select: HTMLSelectElement = <HTMLSelectElement>(
+    document.getElementById('cookieSelector')
+  );
+  for (let i = 0; i < Cookies.length; i++) {
+    if (select === Cookies[i].name) {
+      Cookies[i].chocolateChipNum++;
+    }
+  }
+
   updateDisplay();
 }
 
