@@ -1,7 +1,8 @@
 // Import stylesheets
 import './style.css';
 import { Cookie } from './models/Cookie';
-
+import { SprinkleCookie } from './models/SprinkleCookie';
+import { Colours } from './models/Colours';
 // Create a array/list of cookies named cookies
 let Cookies: Cookie[] = [];
 
@@ -13,8 +14,8 @@ init();
 function init() {
   //TODO: add code here
   // create the two cookies
-  let cookie1: Cookie = new Cookie('Cookie1', 'red', 0);
-  let cookie2: Cookie = new Cookie('Cookie2', 'blue', 30);
+  let cookie1: Cookie = new Cookie('Cookie1', Colours.Brown, 0);
+  let cookie2: Cookie = new Cookie('Cookie2', Colours.Blue, 30);
   // add them to the array
   Cookies.push(cookie1);
   Cookies.push(cookie2);
