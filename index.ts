@@ -11,6 +11,33 @@ document
   .addEventListener('click', changeColour);
 init();
 
+document
+  .getElementById('createCookie-btn')
+  .addEventListener('click', createCookies);
+function createCookies() {
+  let i = 3;
+  let newCookie: Cookie = new Cookie('Cookie ' + [i], Colours.Brown, 0);
+  i++;
+  Cookies.push(newCookie);
+  updateDisplay();
+}
+
+document
+  .getElementById('createSprinkleCookie-btn')
+  .addEventListener('click', createSprinkleCookies);
+function createSprinkleCookies() {
+  let i = 2;
+  let newCookie: Cookie = new SprinkleCookie(
+    'Cookie ' + [i],
+    Colours.Brown,
+    0,
+    Colours.Blue
+  );
+  i++;
+  Cookies.push(newCookie);
+  updateDisplay();
+}
+
 function init() {
   //TODO: add code here
   // create the two cookies
