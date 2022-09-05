@@ -16,6 +16,12 @@ function init() {
   // create the two cookies
   let cookie1: Cookie = new Cookie('Cookie1', Colours.Brown, 0);
   let cookie2: Cookie = new Cookie('Cookie2', Colours.Blue, 30);
+  let sprinklecookie1: SprinkleCookie = new SprinkleCookie(
+    'SprinkleCookie1',
+    Colours.Brown,
+    0,
+    Colours.Blue
+  );
   // add them to the array
   Cookies.push(cookie1);
   Cookies.push(cookie2);
